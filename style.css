@@ -1,0 +1,335 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+#logo {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  display: flex;
+  padding-right: 1100px;
+
+}
+
+#navbar {
+  background-color: #2c3846;
+  padding: 0 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: #ffffff;
+  height: 80px;
+}
+
+#navBarList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.navItem {
+  font-size: 18px;
+  line-height: 27px;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+
+/* landing page */
+.carousel {
+  height: 720px;
+  background-color: #e445d7;
+  
+}
+.introduction {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;  
+}
+
+#firstheader{
+  text-align: center;
+  padding-top: 297px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+#firstpara{
+  text-align: center;
+  padding-top: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* game part */
+
+#headings1{
+  padding-top: 80px;
+  padding-left:160px;
+  font-family: 'Segoe UI';
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  
+}
+
+ 
+#categorieslist {
+    list-style: none;
+    display: flex;
+    flex-direction: start;
+    gap: 30px;
+   
+}
+
+.category {
+    background-color: #f2f6ff;
+    color: black;
+    flex-direction: row;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding-left: 75px;
+    padding-bottom: 40px;
+
+}
+
+
+.gamenavcontainer {
+    background-color: #ffffff;
+    display: flex;
+    gap: 30px;
+    padding: 5%;   
+
+}
+
+#center{
+  text-align: center;
+}
+
+
+/*... flex for games */
+.gamecatcontainer {
+  display: flex;
+  flex-wrap: wrap;
+padding-left: 160px;
+  column-gap: 30px;
+  padding-bottom: 50px;
+  }
+ 
+
+.box  {
+ 
+  height: 250px;
+  background-color:#2C3846;
+  width : 100%; 
+  
+}
+
+
+/* content about us */
+#headings2{
+  padding-top: 80px;
+  padding-left:160px;
+  font-family: 'Segoe UI';
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  
+}
+
+#para1{
+  padding-top: 40px;
+  padding-left:160px;
+  font-family: 'Segoe UI';
+  color: #ffffff;
+  line-height: 150%;
+
+}
+
+/* testimonial part  */
+.box2  {
+  background-color: rgb(255, 255, 255);
+  width : 100%;  
+  height: 400px; 
+  align-items: center; 
+  align-content: center;
+ }
+
+ .testcotainer
+{
+  position: center;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 13.36%;
+  align-content: center;
+  background: #FFFFFF;
+  border-radius: 10px;
+}
+
+.ratingImage{
+  height: 32.43px;
+  width: 32px;
+}
+
+.rating{
+    padding-left: 650px;
+}
+
+.image
+{
+   width: 100px;
+   height: 100px;
+   margin: 0 auto;
+   border-radius: 50%;
+   overflow: hidden;
+   border: 4px solid #fff;
+   
+}
+
+.content
+{
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 150%;
+  /* or 27px */
+  
+  text-align: center;
+  
+  /* Body */
+  
+  color: #666666;
+}
+
+.details
+{ 
+  font-family: 'Segoe UI';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  /* or 27px */
+  
+  text-align: center;
+  
+  /* Body */
+  
+  color: #666666;
+  
+}
+
+
+/* newsletter */
+.newsletter  { 
+  padding: 5%;
+  background-color:  #2c3846;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  height: 558px;
+}
+
+#h1{  
+  text-align: center;
+  font-family: 'Segoe UI';
+  color: #ffffff;
+  }
+
+#par1{
+  padding-top:25px;
+  font-family: 'Segoe UI';
+  color: #ffffff;
+  line-height: 150%;
+
+}
+
+#newsletterForm {
+  padding-top: 55px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.input {
+  border-radius: 20px; 
+  background-color: #f2f6ff;
+  width: 400px;
+  height: 60px;
+  border: none;
+}
+
+.input-icons {
+  border-radius: 10px;
+  background-color: #f2f6ff;
+  width: 400px;
+  height: 60px;
+  border: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.iconInput {
+  width: 16px;
+  height: 12px;
+  text-align: center;
+  padding: 10px;
+}
+
+.button {
+  color: white;
+  background-color: #3366cc;
+  width: 392px;
+  height: 60px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+/*footer */
+.footer {
+  position: absolute;
+  height: 110px;
+  left: 0px;
+  padding-top: 46px;
+  background: #2C3846;
+  width: 100%;
+}
+
+#socials{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;  
+  padding-left: 160px;
+    
+}
+
+.icons {
+  height: 24px;
+  width: 24px;
+  margin-right: 15px;
+  border-radius: 5px;
+}
+#para2{  
+  padding-left:160px;
+  font-family: 'Segoe UI';
+  color: #ffffff;
+  line-height: 150%;
+}
+
+#para3{  
+  padding-left:1072px;
+  font-family: 'Segoe UI';
+  color: #ffffff;
+  }
+
+
