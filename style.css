@@ -8,7 +8,7 @@
   height: 30px;
   margin-top: 10px;
   display: flex;
-  padding-right: 1100px;
+  padding-right: 1000px;
 
 }
 
@@ -309,7 +309,7 @@ padding-left: 160px;
   flex-direction: row;
   justify-content: flex-start;
   gap: 10px;  
-  padding-left: 160px;
+  padding-left: 150px;
     
 }
 
@@ -320,14 +320,14 @@ padding-left: 160px;
   border-radius: 5px;
 }
 #para2{  
-  padding-left:160px;
+  padding-left:150px;
   font-family: 'Segoe UI';
   color: #ffffff;
   line-height: 150%;
 }
 
 #para3{  
-  padding-left:1072px;
+  padding-left:1060px;
   font-family: 'Segoe UI';
   color: #ffffff;
   }
