@@ -39,13 +39,14 @@ a:link, a:visited {
   display: inline-block;
   color: White;
 }
+
 /* slider................*/
 * {
   box-sizing:border-box
 }
 
 /* Slideshow container */
-.slideshow-container {
+.imagecontainer {
   position: relative;
   margin: auto;
 }
@@ -58,31 +59,6 @@ a:link, a:visited {
 }
 
 /* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
 
 /* Caption text */
 .text {
@@ -104,50 +80,56 @@ a:link, a:visited {
 }
 
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
 /* game part */
+.gamenav{
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+.gamenav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.gamenav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.gamenav a.active {
+  background-color: #3366cc;
+  color: white;
+}
+
+.gamenav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .gamenav a:not(:first-child) {display: none;}
+  .gamenav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .gamenav.responsive {position: relative;}
+  .gamenav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .gamenav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 
 #headings1{
   padding-top: 80px;
@@ -159,35 +141,29 @@ a:link, a:visited {
   
 }
 
- 
-#categorieslist {
-    list-style: none;
-    display: flex;
-    flex-direction: start;
-    gap: 30px;
-   
+#categoriesList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+  padding-left: 110px;
+  padding-top: 50px;
+  padding-bottom: 100px;
 }
 
-.category {
-    background-color: #f2f6ff;
-    color: black;
-    flex-direction: row;
-    border-radius: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
-    padding-left: 75px;
-    padding-bottom: 40px;
-
+.categoriesItem {
+  background-color: #f2f6ff;
+  color: black;
+  margin-left: 20px;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+.gameCategoryItemActive {
+  background-color: #3366cc;
+  color: #ffffff;
 }
 
-
-.gamenavcontainer {
-    background-color: #ffffff;
-    display: flex;
-    gap: 30px;
-    padding: 5%;   
-
-}
 
 #center{
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -207,10 +183,13 @@ padding-bottom: 20px;
 .gamecatcontainer {
   display: flex;
   flex-wrap: wrap;
-padding-left: 160px;
+  padding-left: 160px;
   column-gap: 30px;
-  padding-bottom: 50px;
-  }
+  padding-bottom: 100px;
+    }
+  .gameimage{
+    border-radius: 20px;
+  }  
  
 
 #box  {
@@ -250,7 +229,17 @@ padding-left: 160px;
   align-items: center; 
   align-content: center;
  }
+ .testimonialCarousel {
+  display: none;
+}
 
+#testimonialCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
  .testcotainer
 {
   position: center;
@@ -269,7 +258,7 @@ padding-left: 160px;
 }
 
 .rating{
-    padding-left: 590px;
+    padding-left: 0px;
 }
 
 .image
@@ -318,46 +307,51 @@ padding-left: 160px;
 
 
 /* newsletter */
-#newsletter  { 
-  padding : 5%;
-  background-color:  #2c3846;
+#newsletter {
+  padding: 5%;
+  background-color: #2c3846;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  height: 558px;
-}
-
-#h1{  
-  text-align: center;
-  font-family: 'Segoe UI';
-  color: #ffffff;
-  }
-
-#par1{
-  padding-top:25px;
-  font-family: 'Segoe UI';
-  color: #ffffff;
-  line-height: 150%;
-
 }
 
 #newsletterForm {
-  padding-top: 55px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
+  height: 492px;
 }
 
+#newhead{
+  padding-top: 80px;
+  font-family: 'Segoe UI';
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+}
+#newpara{
+  padding-top: 20px;
+  font-family: 'Segoe UI';
+  color: #ffffff;
+  line-height: 150%;
+}
 .input {
-  border-radius: 20px; 
+  /* border-radius: 10px; */
   background-color: #f2f6ff;
-  width: 400px;
-  height: 60px;
+  width: 250px;
+  height: 50px;
   border: none;
-  gap: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  line-height: 50px;
+  text-align: left;
+}
+
+input:focus {
+  outline: none;
 }
 
 .input-icons {
@@ -368,27 +362,28 @@ padding-left: 160px;
   border: none;
   display: flex;
   flex-direction: row;
+  gap: 10px;
 }
 
 .iconInput {
-  width: 16px;
-  height: 12px;
+  width: 20.25px;
+  height: 20px;
   text-align: center;
-  padding: 10px;
- }
+  margin-top: 15px;
+  margin-left: 15px;
+  
+}
 
 .button {
   color: white;
   background-color: #3366cc;
-  width: 392px;
+  width: 400px;
   height: 60px;
   border-radius: 10px;
   text-decoration: none;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 60px;
 }
-
-
 
 /*footer */
 .footer {
