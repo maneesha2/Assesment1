@@ -50,6 +50,7 @@ a:visited {
 .imagecontainer {
   position: relative;
   margin: auto;
+  display: flex;
 }
 
 /* Hide the images by default */
