@@ -1,10 +1,10 @@
 var a;
 function show_hide() {
   if (a == 1) {
-    document.getElementById("block").style.display = "inline";
+    document.getElementsByClassName("thankbox").style.display = "inline";
     return (a = 0);
   } else {
-    document.getElementById("block").style.display = "none";
+    document.getElementsByClassName("thankbox").style.display = "none";
     return (a = 1);
   }
 }
