@@ -1,3 +1,14 @@
+var a;
+function show_hide() {
+  if (a == 1) {
+    document.getElementById("block").style.display = "inline";
+    return (a = 0);
+  } else {
+    document.getElementById("block").style.display = "none";
+    return (a = 1);
+  }
+}
+
 function onGameCategoryItemClick(n, gametype) {
   let gt = gametype;
   let gameItems = document.getElementsByClassName("gameItem");
@@ -9,7 +20,6 @@ function onGameCategoryItemClick(n, gametype) {
       gameItems[i].style.display = "block";
     } else {
       gameItems[i].style.display = "none";
-      // document.getElementById("gameComingSoon").style.display = "block";
     }
   }
 

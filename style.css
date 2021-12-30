@@ -149,39 +149,47 @@ img {
   opacity: 0.7;
 }
 
-#about {
+#box {
+  position: relative;
   background-color: #2c3846;
-  padding: 5%;
-  color: white;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  gap: 5%;
-  /* position: relative; */
-}
-
-#aboutContent {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  padding: 5%;
+  justify-content: space-between;
+  height: 250px;
+}
+/* content about us */
+#headings2 {
+  font-family: "Segoe UI";
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#marioFlying {
-  background-color: red;
-  position: relative;
-   position: absolute;
-  width: 365px;
-  height: 365px;
-  top: -8em;
-  right: 200px; 
+#para1 {
+  font-family: "Segoe UI";
+  color: #ffffff;
+  line-height: 150%;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-#mario {
+#textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.about-img {
   position: absolute;
-  width: 265px;
-  height: 265px;
-  top: -12em;
-  right: 3em;
+  right: 200px;
+  width: 200px;
+  height: 200px;
+  top: -8em;
 }
 
 #testimonials {
