@@ -7,39 +7,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
 </head>
-<header>
-  <div id="navbar">
-    <div id="logo">
-      <img id="logo" src="images/8bit-logo.png">
-    </div>
-    <div id="navItems">
-      <ul id="navBarList">
-        <li class="navItem"> <a href="#game">Games</a> </li>
-        <li class="navItem"> <a href="#box">About</a> </li>
-        <li class="navItem"> <a href="#newsletter">Updates</a> </li>
-
-      </ul>
-    </div>
-  </div>
-</header>
 
 <body>
 
-  <!-- Slideshow container -->
+ <header>
+      <div id="navbar">
+        <div id="logo">
+          <a href="/"><img id="logo" src="images/8bit-logo.png" /></a>
+        </div>
 
+        <div id="navItems">
+          <ul id="navBarList">
+            <a href="#games" class="navlink"><li class="navItem">Games</li></a>
+            <a href="#about" class="navlink"><li class="navItem">About</li></a>
+            <a href="#newsletter" class="navlink"
+              ><li class="navItem">Updates</li></a
+            >
+          </ul>
+        </div>
+      </div>
+    </header>
 
-  <!-- Full-width images with number and caption text -->
-  <div class="imagecontainer">
-    <img src="images/slider/Slide1.png" style="width:100%">
-    <div class="text">
-      <h1 id="firstheader">
-        Collection of retro games
-      </h1>
-      <p id="firstpara"> Play a number of Nintendo 64 classic games </p>
+    <div id="carousel">
+      <div id="carouselImages">
+        <img class="carouselImage" src="images/slide1.png" />
+        <img class="carouselImage" src="images/slide2.png" />
+        <img class="carouselImage" src="images/slide3.png" />
+
+        <div id="carouselDots">
+          <span class="carouselDot" onclick="onCarouselDotClick(0)"></span>
+          <span class="carouselDot" onclick="onCarouselDotClick(1)"></span>
+          <span class="carouselDot" onclick="onCarouselDotClick(2)"></span>
+        </div>
+      </div>
+      <div id="gameInfo">
+        <h1>Collection of retro games</h1>
+        <p>Play a number of Nintendo 64 classic games.</p>
+      </div>
     </div>
-  </div>
-
-  </div>
 
   <div id="game">
     <h1 id="headings1"> All the retro games are in one place </h1>
