@@ -169,6 +169,11 @@ img {
 #marioFlying {
   background-color: red;
   position: relative;
+   position: absolute;
+  width: 365px;
+  height: 365px;
+  top: -8em;
+  right: 200px; 
 }
 
 #mario {
