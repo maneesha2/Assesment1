@@ -7,7 +7,6 @@
   width: 30px;
   height: 30px;
   margin-top: 10px;
-  display: flex;
 }
 
 #navbar {
@@ -81,63 +80,15 @@ a:visited {
 }
 
 /* game part */
-.categories {
-  overflow: hidden;
-  background-color: rgb(255, 255, 255);
-}
-.categories a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
 
-.categories a:hover {
-  background-color: #ddd;
-  color: black;
+#game {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 5%;
 }
-
-.categories a.active {
-  background-color: #3366cc;
-  color: white;
-}
-
-.categories .icon {
-  display: none;
-}
-
-@media screen and (max-width: 600px) {
-  .categories a:not(:first-child) {
-    display: none;
-  }
-  .categories a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .categories.responsive {
-    position: relative;
-  }
-  .categories.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .categories.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
 #headings1 {
-  padding-top: 80px;
-  padding-left: 160px;
   font-family: "Segoe UI";
   color: #333333;
   font-style: normal;
@@ -149,21 +100,23 @@ a:visited {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 30px;
-  padding-left: 110px;
-  padding-top: 50px;
-  padding-bottom: 100px;
-  color: black;
+  gap: 20px 20px;
 }
 
 .categoriesItem {
-  background-color: #ccc9c9;
+  background-color: #f2f6ff;
   color: black;
-  margin-left: 20px;
-  border-radius: 5px;
-  padding: 5px 20px 5px;
-  text-align: center;
+  margin-right: 20px;
+  border-radius: 10px;
+  padding: 5px 20px;
+  cursor: pointer;
 }
+
+.categoriesItem:hover {
+  background-color: #4986ff;
+  color: #ffffff;
+}
+
 .gameCategoryItemActive {
   background-color: #3366cc;
   color: #ffffff;
@@ -184,10 +137,9 @@ a:visited {
 /*... flex for games */
 .gamecatcontainer {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  padding-left: 160px;
-  column-gap: 30px;
-  padding-bottom: 100px;
+  gap: 10px 30px;
 }
 .gameimage {
   border-radius: 20px;
@@ -197,7 +149,9 @@ a:visited {
   position: relative;
   background-color: #2c3846;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  gap: 30px;
+  padding: 5%;
   justify-content: space-between;
   height: 250px;
 }
@@ -212,20 +166,27 @@ a:visited {
 
 /* content about us */
 #headings2 {
-  padding-top: 80px;
-  padding-left: 160px;
   font-family: "Segoe UI";
   color: #ffffff;
   font-style: normal;
   font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 #para1 {
-  padding-top: 40px;
-  padding-left: 160px;
   font-family: "Segoe UI";
   color: #ffffff;
   line-height: 150%;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#textbox {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 /* testimonial part  */
@@ -233,8 +194,11 @@ a:visited {
   background-color: rgb(255, 255, 255);
   width: 100%;
   height: 400px;
-  align-items: center;
-  align-content: center;
+
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 5%;
 }
 .testimonialCarousel {
   display: none;
@@ -410,14 +374,14 @@ input:focus {
   border-radius: 5px;
 }
 #para2 {
-  padding-left: 150px;
+  padding-left: 130px;
   font-family: "Segoe UI";
   color: #ffffff;
   line-height: 150%;
 }
 
 #para3 {
-  padding-left: 1060px;
+  padding-left: 1030px;
   font-family: "Segoe UI";
   color: #ffffff;
 }

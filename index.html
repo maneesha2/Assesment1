@@ -43,17 +43,44 @@
 
   <div id="game">
     <h1 id="headings1"> All the retro games are in one place </h1>
-    <div class ="gamenav",id="categories">
+    <div id="categories">
       <ul id="categoriesList">
-        <li class="gameCategoryItemActive categoriesItem"><a href="#game" class="active">All Games</a></li>
-        <li class="categoriesItem">Action</li>
-        <li class="categoriesItem">Adventure</li>
-        <li class="categoriesItem">Arcade</li>
-        <li class="categoriesItem">Sports</li>
-        <li class="categoriesItem">Strategy</li>
-          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+        <li
+          class="gameCategoryItemActive categoriesItem"
+          onclick="onGameCategoryItemClick(0, 'allgames')"
+        >
+          All Games
+        </li>
+        <li
+          class="categoriesItem"
+          onclick="onGameCategoryItemClick(1, 'action')"
+        >
+          Action
+        </li>
+        <li
+          class="categoriesItem"
+          onclick="onGameCategoryItemClick(2, 'adventure')"
+        >
+          Adventure
+        </li>
+        <li
+          class="categoriesItem"
+          onclick="onGameCategoryItemClick(3, 'arcade')"
+        >
+          Arcade
+        </li>
+        <li
+          class="categoriesItem"
+          onclick="onGameCategoryItemClick(4, 'sports')"
+        >
+          Sports
+        </li>
+        <li
+          class="categoriesItem"
+          onclick="onGameCategoryItemClick(5, 'strategy')"
+        >
+          Strategy
+        </li>
       </ul>
     </div>
   
@@ -98,10 +125,9 @@
   
   <section>
     <div id="box">
-     <div>
+     <div id="textbox">
       <h1 id="headings2"> All the retro games are in one place </h1>
-      <p id="para1"> 8-Bit games provides free retro games on-site for everyone to play.<br>
-        Bringing back nostalgic memories of NES classic games online.</p>
+      <p id="para1"> 8-Bit games provides free retro games on-site for everyone to play. Bringing </br> back nostalgic memories of NES classic games online.</p>
       </div>
        <div class="about-img">
       <img src="images/Mario.png"  >

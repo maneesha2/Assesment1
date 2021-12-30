@@ -1,9 +1,9 @@
-var menu = document.getElementById("categories");
-var btn = menu.getElementsByClassName("categoriesitem");
-for (let i = 0; i < btn.length; i++) {
-  btn[i].addEventListener("click", function () {
-    var current = menu.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
+let categoryItems = document.getElementsByClassName("categoriesItem");
+for (let i = 0; i < categoryItems.length; i++) {
+  categoryItems[i].style.backgroundColor = "#f2f6ff";
+  categoryItems[i].style.color = "black";
 }
+categoryItems[n].style.backgroundColor = "#3366cc";
+categoryItems[n].style.color = "#ffffff";
+}
+
