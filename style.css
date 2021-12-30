@@ -1,22 +1,85 @@
 * {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #2c3846;
+  width: 100%;
+  min-height: 70px;
+  position: fixed;
+  z-index: 3;
+}
+#navbar {
+  padding: 0 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+#navBarList a,
+a:hover,
+a:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#carousel {
+  color: white;
+  position: relative;
+}
+
+.carouselImage {
+  display: none;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+#gameInfo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#carouselDots {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* justify-content: center; */
+}
+.carouselDot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  text-align: center;
 }
 
 #logo {
   width: 30px;
   height: 30px;
   margin-top: 10px;
-}
-
-#navbar {
-  background-color: #2c3846;
-  padding: 0 5%;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  color: #ffffff;
-  height: 80px;
 }
 
 #navBarList {
@@ -29,70 +92,7 @@
   font-size: 18px;
   line-height: 27px;
   margin-top: 25px;
-  margin-left: 20px;
-}
-/* links.........*/
-a:link,
-a:visited {
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  color: White;
-}
-
-/* slider................*/
-* {
-  box-sizing: border-box;
-}
-
-/* Slideshow container */
-.imagecontainer {
-  position: relative;
-  margin: auto;
-  display: flex;
-}
-
-/* Hide the images by default */
-.mySlides {
-  display: none;
-  position: relative;
-  position: sticky;
-}
-
-/* Next & previous buttons */
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 300px;
-  width: 100%;
-  text-align: center;
-  gap: 20px;
-}
-
-#firstpara {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-#firstheader {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-/* game part */
-
-#game {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 5%;
-}
-#headings1 {
-  font-family: "Segoe UI";
-  color: #333333;
-  font-style: normal;
-  font-weight: bold;
+  margin-right: 55px;
 }
 
 #categoriesList {
@@ -121,85 +121,77 @@ a:visited {
   background-color: #3366cc;
   color: #ffffff;
 }
-
-#center {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 27px;
-  /* identical to box height */
-
-  text-align: center;
-  padding-bottom: 20px;
+#games {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 5%;
 }
 
-/*... flex for games */
-.gamecatcontainer {
+.gameItems {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px 30px;
 }
-.gameimage {
-  border-radius: 20px;
-}
 
-#box {
-  position: relative;
-  background-color: #2c3846;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 5%;
-  justify-content: space-between;
-  height: 250px;
-}
-
-.about-img {
-  position: absolute;
-  right: 200px;
-  width: 200px;
+.gameItem img {
+  width: 265px;
   height: 200px;
-  top: -8em;
+  border-radius: 10px;
+}
+.gameItem p {
+  text-align: center;
 }
 
-/* content about us */
-#headings2 {
-  font-family: "Segoe UI";
-  color: #ffffff;
-  font-style: normal;
-  font-weight: bold;
-  display: flex;
-  flex-wrap: wrap;
+.gameItemImage:hover {
+  opacity: 0.7;
 }
 
-#para1 {
-  font-family: "Segoe UI";
-  color: #ffffff;
-  line-height: 150%;
-  padding-top: 10px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-#textbox {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-
-/* testimonial part  */
-.box2 {
-  background-color: rgb(255, 255, 255);
-  width: 100%;
-  height: 400px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
+#about {
+  background-color: #2c3846;
   padding: 5%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 5%;
+  /* position: relative; */
 }
+
+#aboutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#marioFlying {
+  background-color: red;
+  position: relative;
+  /* position: absolute;
+  width: 365px;
+  height: 365px;
+  top: -8em;
+  right: 200px; */
+}
+
+#mario {
+  position: absolute;
+  width: 265px;
+  height: 265px;
+  top: -12em;
+  right: 3em;
+}
+
+#testimonials {
+  background-color: #ffffff;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .testimonialCarousel {
   display: none;
 }
@@ -211,66 +203,34 @@ a:visited {
   gap: 10px;
   text-align: center;
 }
-.testcotainer {
-  position: center;
-  left: 0%;
-  right: 0%;
-  top: 0%;
-  bottom: 13.36%;
-  align-content: center;
-  background: #ffffff;
-  border-radius: 10px;
-}
 
 .ratingImage {
   height: 32.43px;
   width: 32px;
 }
 
-.rating {
-  padding-left: 0px;
-}
-
-.image {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
+#testimonialCardImage {
+  height: auto;
+  width: 80px;
   border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid #fff;
 }
 
-.content {
-  font-family: "Segoe UI";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 150%;
-  /* or 27px */
+#testimonialCarouselDots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
 
+.testimoniaCarouselDot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #f2f6ff;
   text-align: center;
-
-  /* Body */
-
-  color: #666666;
 }
 
-.details {
-  font-family: "Segoe UI";
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 150%;
-  /* or 27px */
-
-  text-align: center;
-
-  /* Body */
-
-  color: #666666;
-}
-
-/* newsletter */
 #newsletter {
   padding: 5%;
   background-color: #2c3846;
@@ -286,30 +246,16 @@ a:visited {
   flex-direction: column;
   gap: 20px;
   align-items: center;
-  height: 492px;
 }
 
-#newhead {
-  padding-top: 80px;
-  font-family: "Segoe UI";
-  color: #ffffff;
-  font-style: normal;
-  font-weight: bold;
-}
-#newpara {
-  padding-top: 20px;
-  font-family: "Segoe UI";
-  color: #ffffff;
-  line-height: 150%;
-}
 .input {
   /* border-radius: 10px; */
   background-color: #f2f6ff;
   width: 250px;
   height: 50px;
   border: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 18px;
+  font-weight: 800;
   line-height: 50px;
   text-align: left;
 }
@@ -331,10 +277,11 @@ input:focus {
 
 .iconInput {
   width: 20.25px;
-  height: 20px;
+  height: 23.75px;
   text-align: center;
   margin-top: 15px;
   margin-left: 15px;
+  /* padding: 10px; */
 }
 
 .button {
@@ -348,40 +295,33 @@ input:focus {
   line-height: 60px;
 }
 
-/*footer */
-.footer {
-  position: absolute;
-  height: 110px;
-  left: 0px;
-  padding-top: 46px;
-  background: #2c3846;
-  width: 100%;
-  padding: 0px;
+.button:hover {
+  background-color: #4986ff;
+}
+#footer {
+  background-color: #2c3846;
+  color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  padding: 5%;
+  justify-content: space-between;
+  border-top: 1px solid white;
 }
 
 #socials {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
   gap: 10px;
-  padding-left: 150px;
 }
 
-.icons {
+.iconsSocial {
   height: 24px;
   width: 24px;
   margin-right: 15px;
   border-radius: 5px;
 }
-#para2 {
-  padding-left: 130px;
-  font-family: "Segoe UI";
-  color: #ffffff;
-  line-height: 150%;
-}
 
-#para3 {
-  padding-left: 1030px;
-  font-family: "Segoe UI";
-  color: #ffffff;
+button {
+  background-color: #f2f6ff;
+  border: none;
 }

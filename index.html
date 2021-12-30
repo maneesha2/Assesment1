@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <title>8-bit games</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <link rel="stylesheet" href="style.css">
-  <script type="text/javascript" src="script.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-</head>
-
-<body>
-
- <header>
+  <body>
+    <header>
       <div id="navbar">
         <div id="logo">
-          <a href="/"><img id="logo" src="images/8bit-logo.png" /></a>
+          <a href="file:///C:/Users/Dell/Desktop/eight_bit/index.html">
+            <img id="logo" src="images/eight_bit.png"
+          /></a>
         </div>
 
         <div id="navItems">
@@ -30,9 +29,9 @@
 
     <div id="carousel">
       <div id="carouselImages">
-        <img class="carouselImage" src="images/slide1.png" />
-        <img class="carouselImage" src="images/slide2.png" />
-        <img class="carouselImage" src="images/slide3.png" />
+        <img class="carouselImage" src="images/slider/slide_1.png" />
+        <img class="carouselImage" src="images/slider/slide_2.png" />
+        <img class="carouselImage" src="images/slider/slide_3.png" />
 
         <div id="carouselDots">
           <span class="carouselDot" onclick="onCarouselDotClick(0)"></span>
@@ -46,167 +45,200 @@
       </div>
     </div>
 
-  <div id="game">
-    <h1 id="headings1"> All the retro games are in one place </h1>
-    <div id="categories">
-      <ul id="categoriesList">
-        <li
-          class="gameCategoryItemActive categoriesItem"
-          onclick="onGameCategoryItemClick(0, 'allgames')"
-        >
-          All Games
-        </li>
-        <li
-          class="categoriesItem"
-          onclick="onGameCategoryItemClick(1, 'action')"
-        >
-          Action
-        </li>
-        <li
-          class="categoriesItem"
-          onclick="onGameCategoryItemClick(2, 'adventure')"
-        >
-          Adventure
-        </li>
-        <li
-          class="categoriesItem"
-          onclick="onGameCategoryItemClick(3, 'arcade')"
-        >
-          Arcade
-        </li>
-        <li
-          class="categoriesItem"
-          onclick="onGameCategoryItemClick(4, 'sports')"
-        >
-          Sports
-        </li>
-        <li
-          class="categoriesItem"
-          onclick="onGameCategoryItemClick(5, 'strategy')"
-        >
-          Strategy
-        </li>
-      </ul>
-    </div>
-  
-
-  <div class="gamecatcontainer">
-    <div>
-      <img src="images/game/castlevania.png" class="gameimage">
-      <p id="center">Super Mario Bros</p>
-    </div>
-
-    <div>
-      <img src="images/game/excitebike.png" class="gameimage">
-      <p id="center">Excite Bike</p>
-    </div>
-
-    <div>
-      <img src="images/game/image 3.png" class="gameimage">
-      <p id="center">Pacman</p>
-    </div>
-
-    <div>
-      <img src="images/game/image 4.png" class="gameimage">
-      <p id="center">Castlevania</p>
-    </div>
-    <div>
-      <img src="images/game/image 5.png" class="gameimage">
-      <p id="center">Duck Hunt</p>
-    </div>
-    <div>
-      <img src="images/game/pacman.png" class="gameimage">
-      <p id="center">The Legend of Zelda</p>
-    </div>
-    <div>
-      <img src="images/game/supermariobros.png" class="gameimage">
-      <p id="center">Mega Man</p>
-    </div>
-
-  </div>
-
-  </div>
-  
-  
-  <section>
-    <div id="box">
-     <div id="textbox">
-      <h1 id="headings2"> All the retro games are in one place </h1>
-      <p id="para1"> 8-Bit games provides free retro games on-site for everyone to play. Bringing </br> back nostalgic memories of NES classic games online.</p>
+    <div id="games">
+      <div id="gameText">
+        <h1>All the retro games in one place</h1>
       </div>
-       <div class="about-img">
-      <img src="images/Mario.png"  >
-   </div>
+      <div id="categories">
+        <ul id="categoriesList">
+          <li
+            class="gameCategoryItemActive categoriesItem"
+            onclick="onGameCategoryItemClick(0, 'allgames')"
+          >
+            All Games
+          </li>
+          <li
+            class="categoriesItem"
+            onclick="onGameCategoryItemClick(1, 'action')"
+          >
+            Action
+          </li>
+          <li
+            class="categoriesItem"
+            onclick="onGameCategoryItemClick(2, 'adventure')"
+          >
+            Adventure
+          </li>
+          <li
+            class="categoriesItem"
+            onclick="onGameCategoryItemClick(3, 'arcade')"
+          >
+            Arcade
+          </li>
+          <li
+            class="categoriesItem"
+            onclick="onGameCategoryItemClick(4, 'sports')"
+          >
+            Sports
+          </li>
+          <li
+            class="categoriesItem"
+            onclick="onGameCategoryItemClick(5, 'strategy')"
+          >
+            Strategy
+          </li>
+        </ul>
+      </div>
+
+      <div class="gameItems">
+        <div class="gameItem" data-game-type="allgames">
+          <img class="gameItemImage" src="images/game/supermariobros.png" />
+          <!-- <p class = "playText">Play</p> -->
+          <p>Super Mario Bros</p>
+        </div>
+
+        <div class="gameItem">
+          <img class="gameItemImage" src="images/game/excitebike.png" />
+          <p>Excite Bike</p>
+        </div>
+
+        <div class="gameItem">
+          <img class="gameItemImage" src="images/game/pacman.png" />
+          <p>Pacman</p>
+        </div>
+
+        <div class="gameItem">
+          <img class="gameItemImage" src="images/game/castlevania.png" />
+          <p>Castlevania</p>
+        </div>
+
+        <div class="gameItem">
+          <img class="gameItemImage" src="images/game/duckhunt.png" />
+          <p>Duck Hunt</p>
+        </div>
+
+        <div class="gameItem">
+          <img class="gameItemImage" src="images/game/legendzeida.png" />
+          <p>The Legend of Zelda</p>
+        </div>
+
+        <div class="gameItem">
+          <img class="gameItemImage" src="images/game/megaman.png" />
+          <p>Mega Man</p>
+        </div>
+      </div>
     </div>
 
-    <div class="box2">
-      <h1 id="headings1"> Loved by everyone </h1>
-      <div>
-        <div class="testcontainer">
-          <div id="testimonialCard">
-            <div class="image">
-              <img src="images/profile/profile1.png">
-            </div>
+    <div id="about">
+      <div id="aboutContent">
+        <h1>About 8-bit Games</h1>
+        <p>
+          8-Bit games provides free retro games on-site for everyone to play.
+          Bringing back nostalgic memories of NES classic games online.
+        </p>
+      </div>
+      <div id="marioFlying">
+        <!-- <p>MARIO IMAGE</p> -->
+        <img id="mario" src="images/mario.png" />
+      </div>
+    </div>
 
-            <div>
-              <p class="details">Someone Famous<br></p>
-            </div>
+    <div id="testimonials">
+      <h1>Loved by everyone</h1>
 
-            <div class="rating">
-              <img class="ratingImage" src="images/star.png">
-              <img class="ratingImage" src="images/star.png">
-              <img class="ratingImage" src="images/star.png">
-              <img class="ratingImage" src="images/star.png">
-              <img class="ratingImage" src="images/star.png">
-            </div>
-            <div>
-              <p class="content">
-                Best retro game platform ever. Just click and start playing.<br>
-                Reminds me of my childhood. So nostalgic.</p>
-            </div>
+      <div class="testimonialCarousel">
+        <div id="testimonialCard">
+          <img id="testimonialCardImage" src="images/profile/profilea.png" />
+          <p>Jake Peralta</p>
+          <p>Retro Games is the best.</p>
+          <div id="rating">
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
           </div>
-        </div>
-
-        <div id="testimonialCarouselDots">
-          <span class="testimoniaCarouselDot"></span>
-          <span class="testimoniaCarouselDot"></span>
-          <span class="testimoniaCarouselDot"></span>
+          <p>
+            Best retro game platform ever. Just click and start playing. Reminds
+            me of my childhood. So nostalgic.
+          </p>
         </div>
       </div>
 
-  </section>
-
-  <div id="newsletter">
-    <h1 id="newhead">Subscribe to our newsletter</h1>
-    <p id="newpara">and receive updates on new game uploads.</p>
-    <form id="newsletterForm">
-      <div class="input-icons">
-        <img class="iconInput" src="images/icon/Vector.png" />
-        <input type="text" class="input" placeholder="Full Name" />
+      <div class="testimonialCarousel">
+        <div id="testimonialCard">
+          <img id="testimonialCardImage" src="images/profile/profilec.png" />
+          <p>Karen Brown</p>
+          <p>Could be better!</p>
+          <div id="rating">
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+          </div>
+          <p>
+            I don't know why, but this website could be better. I mean,I love
+            the games but could be better.
+          </p>
+        </div>
       </div>
 
-      <div class="input-icons">
-        <img class="iconInput" src="images/icon/Vector_1.png" />
-        <input type="email" class="input" placeholder="Email" />
+      <div class="testimonialCarousel">
+        <div id="testimonialCard">
+          <img id="testimonialCardImage" src="images/profile/profileb.png" />
+          <p>Rudolf Klinman</p>
+          <p>One word! Amazing!</p>
+          <div id="rating">
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+            <img class="ratingImage" src="images/star.png" />
+          </div>
+          <p>
+            I think I cried when I played Super Mario. I hope you all, add more
+            games.
+          </p>
+        </div>
       </div>
 
-      <a class="button" href=""> Subscribe </a>
-    </form>
-  </div>
-
-
-  <div class="footer">
-    <div id="socials">
-      <p id="para2">Follow us on: </p>
-      <img class="icons" src="images/icon/fb.png">
-      <img class="icons" src="images/icon/insta.png">
-      <img class="icons" src="images/icon/tw.png">
+      <div id="testimonialCarouselDots">
+        <span class="testimoniaCarouselDot"></span>
+        <span class="testimoniaCarouselDot"></span>
+        <span class="testimoniaCarouselDot"></span>
+      </div>
     </div>
-    <div>
-      <p id="para3">Developed by: Manisha Deshar</p>
+
+    <div id="newsletter">
+      <h1>Subscribe to our newsletter</h1>
+      <p>and receive updates on new game uploads.</p>
+      <form id="newsletterForm">
+        <div class="input-icons">
+          <img class="iconInput" src="images/icon/person.png" />
+          <input type="text" class="input" placeholder="Full Name" />
+        </div>
+
+        <div class="input-icons">
+          <img class="iconInput" src="images/icon/email.png" />
+          <input type="email" class="input" placeholder="Email" />
+        </div>
+
+        <a class="button" href=""> Subscribe </a>
+      </form>
     </div>
-  </div>
 
-</body>
+    <div id="footer">
+      <div id="socials">
+        <p>Follow us on:</p>
+        <img class="iconsSocial" src="images/icon/fb.png" />
+        <img class="iconsSocial" src="images/icon/insta.png" />
+        <img class="iconsSocial" src="images/icon/tw.png" />
+      </div>
 
+      <div id="developer">
+        <p>Developed by: purrfect</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>
