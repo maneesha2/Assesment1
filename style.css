@@ -121,6 +121,7 @@ img {
   background-color: #3366cc;
   color: #ffffff;
 }
+
 #games {
   background-color: #ffffff;
   display: flex;
@@ -145,8 +146,110 @@ img {
   text-align: center;
 }
 
+.gameItem {
+  position: relative;
+}
+
+.playText {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-weight: 700;
+  opacity: 0;
+  text-align: center;
+}
+
 .gameItemImage:hover {
-  opacity: 0.7;
+  opacity: 0.6;
+  transition: 0.5s ease;
+}
+
+.gameItemImage:hover + .playText {
+  opacity: 1;
+  transition: 0.5s ease;
+}
+
+#gameOverlay {
+  position: fixed;
+  display: none;
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+#gamePopUp {
+  background-color: #ffffff;
+  padding: 2%;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+#gamePopUpContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#gamePopUpTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+#gamePopUpInformation {
+  display: flex;
+  flex-direction: column;
+}
+
+.gameInformationAttribute {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.gameInformationAttributeKey {
+  font-weight: 900;
+}
+
+.gamePopUpType {
+  color: #3366cc;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+.playGameButton {
+  background-color: #3366cc;
+  width: 149px;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+  padding: 5%;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.playGameButton:hover {
+  background-color: #4986ff;
+}
+
+#canceloverlayimage {
+  height: 32px;
+  width: 32px;
 }
 
 #box {

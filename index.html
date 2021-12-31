@@ -45,63 +45,108 @@
       </div>
     </div>
 
-    <div id="games">
-      <div id="gameText">
-        <h1>All the retro games in one place</h1>
-      </div>
-      <div id="categories">
-        <ul id="categoriesList">
-          <li
-            class="gameCategoryItemActive categoriesItem"
-            onclick="onGameCategoryItemClick(0, 'allgames')"
-          >
-            All Games
-          </li>
-          <li
-            class="categoriesItem"
-            onclick="onGameCategoryItemClick(1, 'action')"
-          >
-            Action
-          </li>
-          <li
-            class="categoriesItem"
-            onclick="onGameCategoryItemClick(2, 'adventure')"
-          >
-            Adventure
-          </li>
-          <li
-            class="categoriesItem"
-            onclick="onGameCategoryItemClick(3, 'arcade')"
-          >
-            Arcade
-          </li>
-          <li
-            class="categoriesItem"
-            onclick="onGameCategoryItemClick(4, 'sports')"
-          >
-            Sports
-          </li>
-          <li
-            class="categoriesItem"
-            onclick="onGameCategoryItemClick(5, 'strategy')"
-          >
-            Strategy
-          </li>
-        </ul>
-      </div>
-
-      <div class="gameItems">
-        <div class="gameItem" data-game-type="allgames">
-          <img class="gameItemImage" src="images/game/supermariobros.png" />
-          <p class="playText">Play</p>
-          <p>Super Mario Bros</p>
+        <div id="games">
+        <div id="gameText">
+          <h1>All the retro games in one place</h1>
         </div>
-
-        <div class="gameItem">
-          <img class="gameItemImage" src="images/game/excitebike.png" />
-          <p>Excite Bike</p>
+        <div id="categories">
+          <ul id="categoriesList">
+             <li class="gameCategoryItemActive categoriesItem" onclick="onGameCategoryItemClick(0, 'allgames')"> All Games</li>
+            <li class="categoriesItem" onclick="onGameCategoryItemClick(1, 'action')"> Action</li>         
+            <li class="categoriesItem" onclick="onGameCategoryItemClick(2, 'adventure')"> Adventure</li>            
+            <li class="categoriesItem" onclick="onGameCategoryItemClick(3, 'arcade')">Arcade</li>                            
+            <li class="categoriesItem" onclick="onGameCategoryItemClick(4, 'sports')">Sports</li>          
+            <li class="categoriesItem" onclick="onGameCategoryItemClick(5, 'strategy')">Strategy</li>      
+            </ul>
         </div>
+    
+    <div class="gameItems">
+          <div class="gameItem">
+            <img class="gameItemImage" src="images/game/supermariobros.png" onclick="onGameItemImageClick(this.src,'Action','Super Mario Bros')"/> 
+            <p class="playText">Play</p>
+            <p>Super Mario Bros</p>
+          </div>
+      
+      <div class="gameItem">
+            <img class="gameItemImage" src="images/game/excitebike.png" onclick="onGameItemImageClick(this.src,'Action','Excite Bike')"/>
+            <p class="playText">Play</p>
+            <p>Excite Bike</p>
+          </div>
 
+          <div class="gameItem">
+            <img class="gameItemImage" src="images/game/legendzeida.png" onclick="onGameItemImageClick(this.src,'Action','legendzeida')"/>
+            <p class="playText">Play</p>
+            <p>Legendzeida</p>
+          </div>
+
+          <div class="gameItem">
+            <img class="gameItemImage" src="images/game/pacman.png" onclick="onGameItemImageClick(this.src,'Action','pacman')"/>
+            <p class="playText">Play</p>
+            <p>Pacman</p>
+          </div>
+
+          <div class="gameItem">
+            <img class="gameItemImage" src="images/game/megaman.png" onclick="onGameItemImageClick(this.src,'Action','megaman')"/>
+            <p class="playText">Play</p>
+            <p>Megaman</p>
+          </div>
+
+          <div class="gameItem">
+            <img class="gameItemImage" src="images/game/duckhunt.png" onclick="onGameItemImageClick(this.src,'Action','duckhunt')"/>
+            <p class="playText">Play</p>
+            <p>Duckhunt</p>
+          </div>
+          
+          <div id="gameOverlay">
+        <div id="gamePopUp">
+          <div id="gamePopUpImage">
+            <img id = "gamePopUpImageSource" src = "images/supermariobros.png">
+          </div>
+          <div id="gamePopUpContent">
+            <div id="gamePopUpTitle">
+              <h1 id = "gamePopUpName">Super Mario Bros</h1>
+              <p id = "gamePopUpType" class = "gamePopUpType">Action, Adventure</p>
+            </div>
+            
+            <div id = "gamePopUpInformation">
+              <div class = "gameInformationAttribute">
+                <p class = "gameInformationAttributeKey">
+                  NES release date:
+                </p>
+                <p class = "gameInformationAttributeValue">
+                  October 1985
+                </p>
+              </div>
+              <div class = "gameInformationAttribute">
+                <p class = "gameInformationAttributeKey">
+                  Developer:
+                </p>
+                <p class = "gameInformationAttributeValue">
+                  Nintendo
+                </p>
+              </div>
+              <div class = "gameInformationAttribute">
+                <p class = "gameInformationAttributeKey">
+                  Number of playes:
+                </p>
+                <p class = "gameInformationAttributeValue">
+                  2
+                </p>
+              </div>
+             </div>
+  
+             <div id = "playGame">
+              <a class = "playGameButton">Play Game</a>
+             </div>
+          </div>
+          <div id = "cancelOverlay">
+            <img id = "cancelOverlayImage" src = "images/vector.png" onclick="onGameOverlayClick()">
+          </div>
+        </div>
+      </div>
+      </div>
+  
+<!--
         <div class="gameItem">
           <img class="gameItemImage" src="images/game/pacman.png" />
           <p>Pacman</p>
@@ -126,8 +171,11 @@
           <img class="gameItemImage" src="images/game/megaman.png" />
           <p>Mega Man</p>
         </div>
+        -->
       </div>
     </div>
+
+
 
     <div id="box">
      <div id="textbox">

@@ -87,3 +87,25 @@ function onButtonNewsletterSubscribeClick() {
 
 imageTransitionSlides();
 testimonialTransitionSlides();
+
+// game container opening a pop up when a game image is clicked
+
+function onGameItemImageClick(imageSource, gameType, gameName) {
+  document
+    .getElementById("gamePopUpImageSource")
+    .setAttribute("src", imageSource);
+  document.getElementById("gamePopUpName").innerHTML = gameName;
+  document.getElementById("gamePopUpType").innerHTML = gameType;
+  document.getElementById("gameOverlay").style.display = "block";
+}
+
+function onGameOverlayClick() {
+  document.getElementById("gameOverlay").style.display = "none";
+}
+
+window.addEventListener("click", (e) => {
+  console.log(e.target);
+  if (e.target === gameOverlay) {
+    document.getElementById("gameOverlay").style.display = "none";
+  }
+});
