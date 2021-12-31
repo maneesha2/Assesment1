@@ -8,68 +8,6 @@ function show_hide() {
   }
 }
 
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs((slideIndex += n));
-}
-
-function currentDiv(n) {
-  showDivs((slideIndex = n));
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("carouselImage");
-  var dots = document.getElementsByClassName("carousleDots");
-  if (n > x.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = x.length;
-  }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  x[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
-
-var sIndex = 1;
-showDivs(sIndex);
-
-function plusDivs(n) {
-  showDivs((sIndex += n));
-}
-
-function currentDiv(n) {
-  showDivs((sIndex = n));
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("testimonialCarousel");
-  var dots = document.getElementsByClassName("testimonialCarouselDots");
-  if (n > x.length) {
-    sIndex = 1;
-  }
-  if (n < 1) {
-    sIndex = x.length;
-  }
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" test", "");
-  }
-  x[sIndex - 1].style.display = "block";
-  dots[sIndex - 1].className += " test";
-}
-
 function onGameCategoryItemClick(n) {
   let categoryItems = document.getElementsByClassName("categoriesItem");
   for (let i = 0; i < categoryItems.length; i++) {
@@ -79,3 +17,73 @@ function onGameCategoryItemClick(n) {
   categoryItems[n].style.backgroundColor = "#3366cc";
   categoryItems[n].style.color = "#ffffff";
 }
+
+function onCarouselDotClick(n) {
+  let slides = document.getElementsByClassName("carouselImage");
+  let dots = document.getElementsByClassName("carouselDot");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].style.backgroundColor = "white";
+  }
+
+  slides[n].style.display = "block";
+  dots[n].style.backgroundColor = "blue";
+}
+
+let imageSlideIndex = 0;
+let testimonialSlideIndex = 0;
+
+function imageTransitionSlides() {
+  let slides = document.getElementsByClassName("carouselImage");
+  let dots = document.getElementsByClassName("carouselDot");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].style.backgroundColor = "white";
+  }
+
+  imageSlideIndex++;
+  if (imageSlideIndex > slides.length) {
+    imageSlideIndex = 1;
+  }
+  slides[imageSlideIndex - 1].style.display = "block";
+  dots[imageSlideIndex - 1].style.backgroundColor = "blue";
+
+  setTimeout(imageTransitionSlides, 4000);
+}
+
+function testimonialTransitionSlides() {
+  let slides = document.getElementsByClassName("testimonialCarousel");
+  let dots = document.getElementsByClassName("testimoniaCarouselDot");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].style.backgroundColor = "#f2f6ff";
+  }
+
+  testimonialSlideIndex++;
+  if (testimonialSlideIndex > slides.length) {
+    testimonialSlideIndex = 1;
+  }
+  slides[testimonialSlideIndex - 1].style.display = "block";
+  dots[testimonialSlideIndex - 1].style.backgroundColor = "blue";
+  setTimeout(testimonialTransitionSlides, 4000);
+}
+
+function onButtonNewsletterSubscribeClick() {
+  document.getElementById("newsletterBlockInside").style.display = "none";
+  document.getElementById("thankyouBlock").style.display = "block";
+}
+
+imageTransitionSlides();
+testimonialTransitionSlides();

@@ -34,9 +34,9 @@
         <img class="carouselImage" src="images/slider/slide_3.png" />
 
         <div id="carouselDots">
-          <span class="carouselDot" onclick="currentDiv(1)"></span>
-          <span class="carouselDot" onclick="currentDiv(2)"></span>
-          <span class="carouselDot" onclick="currentDiv(3)"></span>
+          <span class="carouselDot" onclick="onCarouselDotClick(0)"></span>
+          <span class="carouselDot" onclick="onCarouselDotClick(1)"></span>
+          <span class="carouselDot" onclick="onCarouselDotClick(2)"></span>
         </div>
       </div>
       <div id="gameInfo">
@@ -198,49 +198,55 @@
         </div>
       </div>
 
-      <div class="testimonialCarouselDots">
-        <span class="testimoniaCarouselDot" onclick="currentDiv(1)"></span>
-        <span class="testimoniaCarouselDot" onclick="currentDiv(1)"></span>
-        <span class="testimoniaCarouselDot" onclick="currentDiv(1)"></span>
+      <div id="testimonialCarouselDots">
+        <span class="testimoniaCarouselDot"></span>
+        <span class="testimoniaCarouselDot"></span>
+        <span class="testimoniaCarouselDot"></span>
       </div>
     </div>
 
-    <div id="newsletter">
-      <h1>Subscribe to our newsletter</h1>
-      <p>and receive updates on new game uploads.</p>
-      <form id="newsletterForm">
-        <div class="input-icons">
-          <img class="iconInput" src="images/icon/person.png" />
-          <input type="text" class="input" placeholder="Full Name" />
-        </div>
+    <div id="newsletterpart">
+      <div id = "newsletterBlock">
+        <h1>Subscribe to our newsletter</h1>
+        <p>and receive updates on new game uploads.</p>
+        <div id = "newsletterBlockInside">
+          <form id="newsletterForm">
+            <div class="inputicon">
+              <img class="iconInput" src="images/icon/person.png" />
+              <input type="text" class="input" placeholder="Full Name" />
+            </div>
 
-        <div class="input-icons">
-          <img class="iconInput" src="images/icon/email.png" />
-          <input type="email" class="input" placeholder="Email" />
-        </div>
-        <a class="button" href="" onclick="show_hide()"> Subscribe </a>
-      </form>
+            <div class="inputicon">
+              <img class="iconInput" src="images/icon/email.png" />
+              <input type="email" class="input" placeholder="Email" />
+            </div>
 
-      <div class="thankyoubox">
-       
-        <p id="thanks">Thank you for subscribing us</p>
+            <a class="buttonNewsletterSubscribe" onclick="onButtonNewsletterSubscribeClick()"> Subscribe </a>
+          </form>
+        </div>
+        <div id = "thankyouBlock">
+          <div id = "thankyouBlockInside">
+            <img  id = "img" src = "images/tickmark.png">
+            <p>Thank you.</p>
+            <p>You are now subscribed to our newsletter.</p>
+          </div>
+        </div>
       </div>
-
-
     </div>
 
     <div id="footer">
       <div id="socials">
         <p>Follow us on:</p>
         <img class="iconsSocial" src="images/icon/fb.png" />
-        <img class="iconsSocial" src="images/icon/insta.png" />
         <img class="iconsSocial" src="images/icon/tw.png" />
+        <img class="iconsSocial" src="images/icon/insta.png" />
       </div>
 
       <div id="developer">
         <p>Developed by: purrfect</p>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
