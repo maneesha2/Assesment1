@@ -58,7 +58,7 @@ img {
   align-items: center;
 }
 
-#carouselDots {
+.carouselDots {
   position: absolute;
   bottom: 5%;
   left: 50%;

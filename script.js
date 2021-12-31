@@ -1,4 +1,3 @@
-var a;
 function show_hide() {
   if (a == 1) {
     document.getElementsByClassName("thankbox").style.display = "inline";
@@ -9,20 +8,69 @@ function show_hide() {
   }
 }
 
-function onGameCategoryItemClick(n, gametype) {
-  let gt = gametype;
-  let gameItems = document.getElementsByClassName("gameItem");
+var slideIndex = 1;
+showDivs(slideIndex);
 
-  for (let i = 0; i < gameItems.length; i++) {
-    let gameItemType = gameItems[i].getAttribute("data-game-type");
+function plusDivs(n) {
+  showDivs((slideIndex += n));
+}
 
-    if (gameItemType === gt) {
-      gameItems[i].style.display = "block";
-    } else {
-      gameItems[i].style.display = "none";
-    }
+function currentDiv(n) {
+  showDivs((slideIndex = n));
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("carouselImage");
+  var dots = document.getElementsByClassName("carousleDots");
+  if (n > x.length) {
+    slideIndex = 1;
   }
+  if (n < 1) {
+    slideIndex = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  x[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
 
+var sIndex = 1;
+showDivs(sIndex);
+
+function plusDivs(n) {
+  showDivs((sIndex += n));
+}
+
+function currentDiv(n) {
+  showDivs((sIndex = n));
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("testimonialCarousel");
+  var dots = document.getElementsByClassName("testimonialCarouselDots");
+  if (n > x.length) {
+    sIndex = 1;
+  }
+  if (n < 1) {
+    sIndex = x.length;
+  }
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" test", "");
+  }
+  x[sIndex - 1].style.display = "block";
+  dots[sIndex - 1].className += " test";
+}
+
+function onGameCategoryItemClick(n) {
   let categoryItems = document.getElementsByClassName("categoriesItem");
   for (let i = 0; i < categoryItems.length; i++) {
     categoryItems[i].style.backgroundColor = "#f2f6ff";
@@ -31,68 +79,3 @@ function onGameCategoryItemClick(n, gametype) {
   categoryItems[n].style.backgroundColor = "#3366cc";
   categoryItems[n].style.color = "#ffffff";
 }
-
-function onCarouselDotClick(n) {
-  let slides = document.getElementsByClassName("carouselImage");
-  let dots = document.getElementsByClassName("carouselDot");
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].style.backgroundColor = "white";
-  }
-
-  slides[n].style.display = "block";
-  dots[n].style.backgroundColor = "blue";
-}
-
-let imageSlideIndex = 0;
-let testimonialSlideIndex = 0;
-
-function imageTransitionSlides() {
-  let slides = document.getElementsByClassName("carouselImage");
-  let dots = document.getElementsByClassName("carouselDot");
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].style.backgroundColor = "white";
-  }
-
-  imageSlideIndex++;
-  if (imageSlideIndex > slides.length) {
-    imageSlideIndex = 1;
-  }
-  slides[imageSlideIndex - 1].style.display = "block";
-  dots[imageSlideIndex - 1].style.backgroundColor = "blue";
-
-  setTimeout(imageTransitionSlides, 2000);
-}
-
-function testimonialTransitionSlides() {
-  let slides = document.getElementsByClassName("testimonialCarousel");
-  let dots = document.getElementsByClassName("testimoniaCarouselDot");
-
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  for (let i = 0; i < dots.length; i++) {
-    dots[i].style.backgroundColor = "#f2f6ff";
-  }
-
-  testimonialSlideIndex++;
-  if (testimonialSlideIndex > slides.length) {
-    testimonialSlideIndex = 1;
-  }
-  slides[testimonialSlideIndex - 1].style.display = "block";
-  dots[testimonialSlideIndex - 1].style.backgroundColor = "blue";
-  setTimeout(testimonialTransitionSlides, 2000);
-}
-
-imageTransitionSlides();
-testimonialTransitionSlides();
