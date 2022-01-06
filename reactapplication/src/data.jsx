@@ -93,18 +93,54 @@ export const about = {
 
 /***************************Testimonial************************** */
 
+export const testimonial = {
+  title: "Loved by everyone",
+  components: [
+    {
+      image: {
+        src: "../images/profile/profilea.png",
+        alt: "Johan Smith",
+      },
+      name: "Johan Smith",
+      description: "Retro Games is the best!",
+      subDescription:
+        "Best Retro Game ever. Just Click and start playing. Reminds me of my childhood. Just amazing.",
+    },
+    {
+      image: {
+        src: "../images/profile/profileb.png",
+        alt: "Karen Brown",
+      },
+      name: "Karen Brown",
+
+      description: "Could be better.",
+      subDescription:
+        "Best Retro Game ever. Just Click and start playing. Reminds me of my childhood. Just amazing.",
+    },
+    {
+      image: {
+        src: "../images/profile/profilec.png",
+        alt: "Karen Brown",
+      },
+      name: "Karen Brown",
+
+      description: "Could be better.",
+      subDescription:
+        "Best Retro Game ever. Just Click and start playing. Reminds me of my childhood. Just amazing.",
+    },
+  ],
+};
+
 /***************************Newsletter************************** */
+
+export const newsletter = {
+  title: "Subscribe to our newsletter",
+  subtitle: " and receive updates on new game uploads.",
+};
 
 /***************************Footer************************** */
 
-// export const footer = {
-
-//   follow: "Follow Us",
-
-// };
-
-// export const icons = [
-//   { src: "../images/icon/fb.png", alt: "fb" },
-//   { src: "../images/icon/fb.png", alt: "fb" },
-//   { src: "../images/icon/fb.png", alt: "fb" },
-// ];
+export const footer = {
+  follow: "Follow Us:",
+  developer: " Developed By: Purrfect",
+};
