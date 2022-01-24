@@ -30,7 +30,7 @@ function App() {
         title={carouselText.title}
         subtitle={carouselText.subtitle}
       />
-      <Game gameText={gameText} gameCategories={gameCategories} games={games} />
+      <Game text={gameText} collections={games} />
       <About about={about} />
       <Testimonial testimonial={testimonial} />
       <Newsletter newsletter={newsletter} />

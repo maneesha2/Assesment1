@@ -43,46 +43,202 @@ export const gameCategories = [
   "Strategy",
 ];
 
+export const hoverText = "Play";
 export const games = [
   {
-    title: "Super Mario Bros",
-    src: "../images/game/supermariobros.png",
-    alt: "Super Mario Bros",
+    id: 0,
+    type: "All Games",
+    items: [
+      {
+        title: "Super Mario Bros",
+        image: {
+          src: "../images/game/supermariobros.png",
+          alt: "Super Mario Bros",
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numOfPlayers: 2,
+      },
+      {
+        title: "Excite Bike",
+        image: {
+          src: "../images/game/excitebike.png",
+          alt: "Excite Bike",
+        },
+        releaseDate: "Feburary 2001",
+        developer: "Nintendo",
+        numOfPlayers: 1,
+      },
+      {
+        title: "Pacman",
+        image: {
+          src: "../images/game/pacman.png",
+          alt: "Pacman",
+        },
+        releaseDate: "March 1985",
+        developer: "Nintendo",
+        numOfPlayers: 1,
+      },
+      {
+        title: "Castlevania",
+        image: {
+          src: "../images/game/castlevania.png",
+          alt: "Castlevania",
+        },
+        releaseDate: "March 1985",
+        developer: "Nintendo",
+        numOfPlayers: 2,
+      },
+      {
+        title: "Duck Hunt",
+        image: {
+          src: "../images/game/duckhunt.png",
+          alt: "Duck Hunt",
+        },
+        releaseDate: "April 1985",
+        developer: "Nintendo",
+        numOfPlayers: 2,
+      },
+      {
+        title: "The Legend of Zelda",
+        image: {
+          src: "../images/game/legendzeida.png",
+          alt: "The Legend of Zelda",
+        },
+        releaseDate: "May 1985",
+        developer: "Nintendo",
+        numOfPlayers: 2,
+      },
+      {
+        title: "Mega Man",
+        image: {
+          src: "../images/game/megaman.png",
+          alt: "Mega Man",
+        },
+        releaseDate: "June 1985",
+        developer: "Nintendo",
+        numOfPlayers: 3,
+      },
+    ],
   },
   {
-    title: "Castlevania",
-    src: "../images/game/castlevania.png",
-    alt: "Castlevania",
+    id: 1,
+    type: "Action",
+    items: [
+      {
+        title: "Super Mario Bros",
+        image: {
+          src: "../images/game/supermariobros.png",
+          alt: "Super Mario Bros",
+        },
+        releaseDate: "January 1985",
+        developer: "Nintendo",
+        numOfPlayers: 2,
+      },
+      {
+        title: "Excite Bike",
+        image: {
+          src: "../images/game/excitebike.png",
+          alt: "Excite Bike",
+        },
+        releaseDate: "Feburary 2001",
+        developer: "Nintendo",
+        numOfPlayers: 1,
+      },
+      {
+        title: "Pacman",
+        image: {
+          src: "../images/game/pacman.png",
+          alt: "Pacman",
+        },
+        releaseDate: "March 1985",
+        developer: "Nintendo",
+        numOfPlayers: 1,
+      },
+    ],
   },
-
   {
-    title: "Duckhunt",
-    src: "../images/game/duckhunt.png",
-    alt: "Duckhunt",
+    id: 2,
+    type: "Adventure",
+    items: [
+      {
+        title: "Duck Hunt",
+        image: {
+          src: "../images/game/duckhunt.png",
+          alt: "Duck Hunt",
+        },
+        releaseDate: "April 1985",
+        developer: "Nintendo",
+        numOfPlayers: 2,
+      },
+      {
+        title: "The Legend of Zelda",
+        image: {
+          src: "../images/game/duckhunt.png",
+          alt: "The Legend of Zelda",
+        },
+        releaseDate: "May 1985",
+        developer: "Nintendo",
+        numOfPlayers: 2,
+      },
+    ],
   },
-
   {
-    title: "Excitebike",
-    src: "../images/game/excitebike.png",
-    alt: "Excitebike",
+    id: 3,
+    type: "Arcade",
+    items: [
+      {
+        title: "Castlevania",
+        image: {
+          src: "../images/game/castlevania.png",
+          alt: "Castlevania",
+        },
+        releaseDate: "March 1985",
+        developer: "Nintendo",
+        numOfPlayers: 2,
+      },
+      {
+        title: "Duck Hunt",
+        image: {
+          src: "../images/game/duckhunt.png",
+          alt: "Duck Hunt",
+        },
+        releaseDate: "April 1985",
+        developer: "Nintendo",
+        numOfPlayers: 2,
+      },
+    ],
   },
   {
-    title: "Legendzeida",
-    src: "../images/game/legendzeida.png",
-    alt: "Legendzeida",
+    id: 4,
+    type: "Sports",
+    items: [],
   },
   {
-    title: "Megaman",
-    src: "../images/game/megaman.png",
-    alt: "Megaman",
-  },
-  {
-    title: "Pacman",
-    src: "../images/game/pacman.png",
-    alt: "Pacman",
+    id: 5,
+    type: "Strategy",
+    items: [
+      {
+        title: "Pacman",
+        image: {
+          src: "../images/game/pacman.png",
+          alt: "Pacman",
+        },
+        releaseDate: "March 1985",
+        developer: "Nintendo",
+        numOfPlayers: 1,
+      },
+    ],
   },
 ];
 
+export const overlayContent = {
+  buttonText: "Play Game",
+  closeIcon: {
+    src: "./images/cancel.png",
+    alt: "closeicon",
+  },
+};
 /*************************About******************************** */
 
 export const about = {

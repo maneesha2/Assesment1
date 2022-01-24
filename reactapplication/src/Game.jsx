@@ -1,26 +1,44 @@
-export default function Game({ gameText, gameCategories, games }) {
+import { useState } from "react";
+import { games, hoverText } from "./data";
+import GameItem from "./gameCard";
+
+export default function Game({ text, collections }) {
+  const [index, setIndex] = useState(0);
+  const itemSelected = collections.find((collection, idx) => idx == index);
   return (
-    <div className="games" id="game">
-      <div className="gameText">
-        <h1>{gameText}</h1>
-      </div>
-      <div className="categories">
-        <ul className="categoriesList">
-          {gameCategories.map((gameCategory, index) => {
-            return <li className="categoriesItem">{gameCategory}</li>;
-          })}
-        </ul>
-        <div className="gameItems">
-          {games.map((game, index) => {
+    <>
+      <div className="games" id="game">
+        <div className="gameText">
+          <h1>{text}</h1>
+        </div>
+        <div className="categories">
+          {collections.map((collection, CollectionIdx) => {
             return (
-              <div className="gameItem">
-                <img className="gameItemImage" {...game} />
-                <p>{game.title}</p>
-              </div>
+              <button
+                className="categoriesItem"
+                onClick={() => setIndex(CollectionIdx)}
+                style={{
+                  backgroundColor:
+                    index === CollectionIdx ? "#3366cc" : "#f2f6ff",
+                  color: index === CollectionIdx ? "#ffffff" : "black",
+                }}
+              >
+                {collection.type}
+              </button>
             );
           })}
         </div>
+        <div className="gameItems">
+          {itemSelected.items.map((item, i) => {
+            if (itemSelected.items === null) {
+              console.log("empty");
+            } else {
+              console.log("not empty");
+            }
+            return <GameItem item={item} hoverText={hoverText} />;
+          })}
+        </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -140,6 +140,167 @@ body {
 .gameItem p {
   text-align: center;
 }
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+.games {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 5%;
+}
+
+.categoriesList {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px 20px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px 10px;
+}
+
+.categoriesItem {
+  background-color: #f2f6ff;
+  color: black;
+  margin-right: 20px;
+  border-radius: 10px;
+  padding: 5px 20px;
+  border: none;
+  font-size: 1em;
+}
+
+.categoriesItem:hover {
+  background-color: #4986ff;
+  color: #ffffff;
+}
+
+/***************************Testimonials**************/
+.gameItems {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px 30px;
+}
+
+.gameItem img {
+  width: 265px;
+  height: 200px;
+  border-radius: 10px;
+}
+.gameItem p {
+  text-align: center;
+}
+.gameItem {
+  position: relative;
+  cursor: pointer;
+}
+.playText {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-weight: 700;
+  opacity: 0;
+  text-align: center;
+}
+
+.gameOverlay {
+  position: fixed;
+  display: none;
+  overflow: auto;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+}
+
+.gamePopUp {
+  background-color: #ffffff;
+  /* min-width: 50vw; */
+  padding: 2%;
+  border-radius: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* -ms-transform: translate(-50%, -50%); */
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.gamePopUpContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.gamePopUpTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.gamePopUpInformation {
+  display: flex;
+  flex-direction: column;
+}
+
+.gameInformationAttribute {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.gameInformationAttributeKey {
+  font-weight: 900;
+}
+
+.gamePopUpType {
+  color: #3366cc;
+  font-size: 0.8em;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.playGameButton {
+  background-color: #3366cc;
+  width: 149px;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+  padding: 5%;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.playGameButton:hover {
+  background-color: #4986ff;
+}
+
+.cancelOverlay img {
+  height: 32px;
+  width: 32px;
+}
+
 /***************************Testimonials**************/
 .testimonials {
   background-color: #ffffff;
@@ -217,6 +378,23 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.marioFlying {
+  position: relative;
+  position: absolute;
+  width: 365px;
+  height: 365px;
+  top: -8em;
+  right: 200px;
+}
+
+.mario {
+  position: absolute;
+  width: 265px;
+  height: 265px;
+  top: -12em;
+  right: 3em;
 }
 
 /***************************Newsletter**************/
