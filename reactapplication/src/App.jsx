@@ -2,6 +2,9 @@ import "./App.css";
 import Navbar from "./navBar.jsx";
 import Game from "./Game";
 import About from "./about";
+import Newsletter from "./newsletter";
+import Footer from "./Footer";
+import Testimonial from "./cardslider.jsx";
 
 import ImageCarousel from "./imageSlider";
 import {
@@ -13,6 +16,9 @@ import {
   gameCategories,
   games,
   about,
+  footer,
+  newsletter,
+  testimonial,
 } from "./data";
 
 function App() {
@@ -26,6 +32,9 @@ function App() {
       />
       <Game gameText={gameText} gameCategories={gameCategories} games={games} />
       <About about={about} />
+      <Testimonial testimonial={testimonial} />
+      <Newsletter newsletter={newsletter} />
+      <Footer footer={footer} />
     </div>
   );
 }

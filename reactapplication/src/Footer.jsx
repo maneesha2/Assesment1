@@ -1,10 +1,13 @@
-// export default function Footer({ about }) {
-//   return (
-//     <div className="about" id="about">
-//       <div className="aboutContent">
-//         <h1>{about.title}</h1>
-//         <p>{about.description}</p>
-//       </div>
-//     </div>
-//   );
-// }
+export default function Footer({ footer }) {
+  return (
+    <div className="footer">
+      <div className="footersection">
+        <p>{footer.follow}</p>
+        <img className="icons" src="../images/icon/fb.png" alt="fb" />
+        <img className="icons" src="../images/icon/insta.png" alt="insta" />
+        <img className="icons" src="../images/icon/tw.png" alt="twitter" />
+      </div>
+      <p>{footer.developer}</p>
+    </div>
+  );
+}
