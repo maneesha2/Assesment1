@@ -36,7 +36,11 @@ function App() {
         image={about.image}
       />
       <Testimonial testimonial={testimonial} />
-      <Newsletter newsletter={newsletter} />
+      <Newsletter
+        title={newsletter}
+        forms={newsletter.form}
+        submit={newsletter.submit}
+      />
       <Footer footer={footer} />
     </div>
   );
