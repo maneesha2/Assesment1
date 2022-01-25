@@ -140,6 +140,38 @@ body {
 .gameItem p {
   text-align: center;
 }
+.playText {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-weight: 700;
+  opacity: 0;
+  text-align: center;
+}
+
+.playText {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-weight: 700;
+  opacity: 0;
+  text-align: center;
+}
+.gameItemImage:hover {
+  opacity: 0.6;
+  transition: 0.5s ease;
+}
+
+.gameItemImage:hover + .playText {
+  opacity: 1;
+  transition: 0.5s ease;
+}
 
 .App {
   font-family: sans-serif;
@@ -192,9 +224,14 @@ body {
 }
 
 .gameItem img {
-  width: 265px;
-  height: 200px;
-  border-radius: 10px;
+  width: 275px;
+  height: 190px;
+  top: 10%;
+  bottom: 10%;
+  right: -5%;
+  left: -5%;
+
+  border-radius: 5% / 50%;
 }
 .gameItem p {
   text-align: center;
@@ -231,14 +268,12 @@ body {
 
 .gamePopUp {
   background-color: #ffffff;
-  /* min-width: 50vw; */
   padding: 2%;
   border-radius: 10px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* -ms-transform: translate(-50%, -50%); */
   display: flex;
   flex-direction: row;
   gap: 30px;

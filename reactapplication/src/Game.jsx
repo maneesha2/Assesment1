@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { games, hoverText } from "./data";
+import { games, hover } from "./data";
 import GameItem from "./gameCard";
 
 export default function Game({ text, collections }) {
@@ -35,7 +35,7 @@ export default function Game({ text, collections }) {
             } else {
               console.log("not empty");
             }
-            return <GameItem item={item} hoverText={hoverText} />;
+            return <GameItem item={item} hover={hover} />;
           })}
         </div>
       </div>

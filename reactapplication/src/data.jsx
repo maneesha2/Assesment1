@@ -33,6 +33,7 @@ export const logoImage = {
 /*************************Game******************************** */
 
 export const gameText = "All the retro games in one place";
+export const hover = "Play";
 
 export const gameCategories = [
   "All Games",
@@ -43,7 +44,6 @@ export const gameCategories = [
   "Strategy",
 ];
 
-export const hoverText = "Play";
 export const games = [
   {
     id: 0,

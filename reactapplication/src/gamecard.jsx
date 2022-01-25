@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Overlay from "./gamepopUp";
 
-export default function GameItem({ item, hoverText = "Play" }) {
+export default function GameItem({ item, hover = "Play" }) {
   const [overlay, setOverlay] = useState(false);
   return (
     <div className="gameItem">
@@ -10,14 +10,13 @@ export default function GameItem({ item, hoverText = "Play" }) {
         {...item.image}
         onClick={() => setOverlay(true)}
       />
-      <p className="playText">{hoverText}</p>
+      <p className="playText">{hover}</p>
       <p>{item.title}</p>
       <Overlay
         overlay={overlay}
         setOverlay={setOverlay}
         title={item.title}
         image={item.image}
-        category={item.category}
         releaseDate={item.releaseDate}
         developer={item.developer}
         numOfPlayers={item.numOfPlayers}

@@ -7,7 +7,6 @@ export default function Overlay({
   releaseDate,
   developer,
   numOfPlayers,
-  category,
 }) {
   return (
     <div
