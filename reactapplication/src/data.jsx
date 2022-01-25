@@ -242,9 +242,13 @@ export const overlayContent = {
 /*************************About******************************** */
 
 export const about = {
-  title: "About 8-bit games",
+  title: "About 8-bit Games",
   description:
     "8-Bit games provides free retro games on-site for everyone to play. Bringing back nostalgic memories of NES classic games online.",
+  image: {
+    src: "./images/mario.png",
+    alt: "Mario Image",
+  },
 };
 
 /***************************Testimonial************************** */
