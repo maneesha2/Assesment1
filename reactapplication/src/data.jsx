@@ -265,6 +265,7 @@ export const testimonial = {
         alt: "Johan Smith",
       },
       name: "Johan Smith",
+      rating: 5,
       description: "Retro Games is the best!",
       subDescription:
         "Best Retro Game ever. Just Click and start playing. Reminds me of my childhood. Just amazing.",
@@ -275,6 +276,7 @@ export const testimonial = {
         alt: "Karen Brown",
       },
       name: "Karen Brown",
+      rating: 4,
 
       description: "Could be better.",
       subDescription:
@@ -286,6 +288,7 @@ export const testimonial = {
         alt: "Karen Brown",
       },
       name: "Karen Brown",
+      rating: 5,
 
       description: "Could be better.",
       subDescription:
