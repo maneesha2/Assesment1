@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { games, hover } from "./data";
-import GameItem from "./gameCard";
+import GameItem from "./gamecard";
 
 export default function Game({ text, collections }) {
   const [index, setIndex] = useState(0);
@@ -20,7 +20,8 @@ export default function Game({ text, collections }) {
                 style={{
                   backgroundColor:
                     index === CollectionIdx ? "#3366cc" : "#f2f6ff",
-                  color: index === CollectionIdx ? "#ffffff" : "black",
+
+                  color: index === CollectionIdx ? "#ffffff" : "#666666",
                 }}
               >
                 {collection.type}

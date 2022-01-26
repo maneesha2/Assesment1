@@ -16,14 +16,9 @@ export default function Card({ testimonial, cardIndex, index, rating }) {
         <p className="reviewer">{testimonial.name}</p>
         <div className="">
           <div className="rating">
-            {[...Array(rating)].map((e, i) => {
+            {[...Array(testimonial.rating)].map((e, i) => {
               return <img className="ratingImage" {...ratingImage} />;
             })}
-            {/* <img className="ratingImage" src="./images/star.png" alt="star" />
-          <img className="ratingImage" src="./images/star.png" alt="star" />
-          <img className="ratingImage" src="./images/star.png" alt="star" />
-          <img className="ratingImage" src="./images/star.png" alt="star" />
-          <img className="ratingImage" src="./images/star.png" alt="star" /> */}
           </div>
         </div>
         <p className="review">{testimonial.description}</p>
