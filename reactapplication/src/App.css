@@ -415,13 +415,12 @@ body {
   gap: 20px;
 }
 
-.marioFlying {
+div.marioFlying {
   position: relative;
   position: absolute;
   width: 365px;
   height: 365px;
-  top: -8em;
-  right: 200px;
+  right: 50px;
 }
 
 .mario {
