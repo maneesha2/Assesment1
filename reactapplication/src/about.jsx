@@ -1,12 +1,12 @@
-export default function About({ about }) {
+export default function about({ title, description, image }) {
   return (
     <div className="about" id="about">
       <div className="aboutContent">
-        <h1>{about.title}</h1>
-        <p>{about.description}</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
       </div>
       <div className="marioFlying">
-        <image className="mario" src="../images/mario.png" />
+        <img className="mario" {...image}></img>
       </div>
     </div>
   );

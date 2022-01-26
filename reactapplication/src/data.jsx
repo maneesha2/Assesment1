@@ -1,3 +1,6 @@
+import person from "../images/icon/person.png";
+import email from "../images/icon/email.png";
+
 export const slideImages = [
   "../images/slider/slide_1.png",
   "../images/slider/slide_2.png",
@@ -242,9 +245,13 @@ export const overlayContent = {
 /*************************About******************************** */
 
 export const about = {
-  title: "About 8-bit games",
+  title: "About 8-bit Games",
   description:
     "8-Bit games provides free retro games on-site for everyone to play. Bringing back nostalgic memories of NES classic games online.",
+  image: {
+    src: "./images/mario.png",
+    alt: "Mario Image",
+  },
 };
 
 /***************************Testimonial************************** */
@@ -291,7 +298,28 @@ export const testimonial = {
 
 export const newsletter = {
   title: "Subscribe to our newsletter",
-  subtitle: " and receive updates on new game uploads.",
+  subtitle: "and receive updates on new game uploads",
+  form: [
+    {
+      icon: person,
+      text: "Fullname",
+      type: "text",
+    },
+    {
+      icon: email,
+      text: "Email",
+      type: "email",
+    },
+  ],
+  buttonText: "Subscribe",
+  submit: {
+    image: {
+      src: "../images/vector.png",
+      alt: "done",
+    },
+    title: "Thank You",
+    subtext: "You are now subscribed to newsletter.",
+  },
 };
 
 /***************************Footer************************** */

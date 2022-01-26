@@ -1,44 +1,19 @@
-export default function Newsletter({ newsletter }) {
+import { useState } from "react";
+import { Form } from "./form";
+import { Subscribe } from "./subscribe";
+
+export default function Newsletter({ info, forms, submit }) {
+  const [state, setState] = useState(false);
+  const display = !state ? "flex" : "none";
+  console.log(state);
   return (
-    <div className="newsletter">
-      <div className="newsletterBlockInside">
-        <div className="newsletterBlock">
-          <h1>{newsletter.title}</h1>
-          <p>{newsletter.subtitle}</p>
-          <form className="newsletterForm">
-            <div className="inputicons">
-              <image
-                className="iconinput"
-                src="../images/icon/person.png"
-                alt="person"
-              />
-              <input type="text" className="input" placeholder="Full Name" />
-            </div>
-
-            <div className="inputicons">
-              <image src="../images/icon/email.png" />
-              <input
-                type="text"
-                className="input"
-                placeholder="Email"
-                alt="email"
-              />
-            </div>
-
-            <button className="subscribe" onclick="onButtonClick()">
-              Subscribe
-            </button>
-          </form>
-        </div>
-
-        {/* <div className = "thankyouBlock">
-            <div className = "thankyouBlockInside">
-              <image  className = "img" src = "images/tickmark.png"/>
-              <p>Thank you.</p>
-              <p>You are now subscribed to our newsletter.</p>
-            </div>
-          </div> */}
+    <div className="update" id="update">
+      <div className="newsletter">
+        <h1>{info.title}</h1>
+        <p>{info.subtitle}</p>
+        <Form display={display} forms={forms} setState={setState} info={info} />
       </div>
+      <Subscribe submit={submit} state={state} />
     </div>
   );
 }
