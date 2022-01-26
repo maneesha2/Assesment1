@@ -24,7 +24,6 @@ export default function CardSlider({ testimonial }) {
             <TestimonialCard
               testimonial={testimonial}
               index={index}
-              rating={testimonial.rating}
               cardIndex={cardIndex}
             />
           );
