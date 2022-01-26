@@ -288,7 +288,7 @@ export const testimonial = {
         alt: "Karen Brown",
       },
       name: "Karen Brown",
-      rating: 5,
+      rating: 3,
 
       description: "Could be better.",
       subDescription:
