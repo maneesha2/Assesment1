@@ -246,8 +246,6 @@ export const overlayContent = {
 
 export const about = {
   title: "About 8-bit Games",
-  description:
-    "8-Bit games provides free retro games on-site for everyone to play. Bringing back nostalgic memories of NES classic games online.",
   image: {
     src: "./images/mario.png",
     alt: "Mario Image",
@@ -275,10 +273,10 @@ export const testimonial = {
         src: "../images/profile/profileb.png",
         alt: "Karen Brown",
       },
-      name: "Karen Brown",
+      name: "Rudolf Kilnman",
       rating: 4,
 
-      description: "Could be better.",
+      description: "One word. Amazing.",
       subDescription:
         "Best Retro Game ever. Just Click and start playing. Reminds me of my childhood. Just amazing.",
     },
