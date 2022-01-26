@@ -37,7 +37,7 @@ function App() {
       />
       <Testimonial testimonial={testimonial} />
       <Newsletter
-        title={newsletter}
+        info={newsletter}
         forms={newsletter.form}
         submit={newsletter.submit}
       />

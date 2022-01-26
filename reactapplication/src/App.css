@@ -151,18 +151,6 @@ body {
   opacity: 0;
   text-align: center;
 }
-
-.playText {
-  color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 1.5em;
-  font-weight: 700;
-  opacity: 0;
-  text-align: center;
-}
 .gameItemImage:hover {
   opacity: 0.6;
   transition: 0.5s ease;
@@ -415,13 +403,12 @@ body {
   gap: 20px;
 }
 
-.marioFlying {
+div.marioFlying {
   position: relative;
   position: absolute;
   width: 365px;
   height: 365px;
-  top: -8em;
-  right: 200px;
+  right: 50px;
 }
 
 .mario {
