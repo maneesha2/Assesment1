@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { games, hover } from "./data";
-import GameItem from "./gameCard";
+import GameItem from "./gamecard";
 
 export default function Game({ text, collections }) {
   const [index, setIndex] = useState(0);
