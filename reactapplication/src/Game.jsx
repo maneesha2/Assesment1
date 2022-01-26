@@ -20,7 +20,8 @@ export default function Game({ text, collections }) {
                 style={{
                   backgroundColor:
                     index === CollectionIdx ? "#3366cc" : "#f2f6ff",
-                  color: index === CollectionIdx ? "#ffffff" : "black",
+
+                  color: index === CollectionIdx ? "#ffffff" : "#666666",
                 }}
               >
                 {collection.type}
